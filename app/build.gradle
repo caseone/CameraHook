@@ -6,6 +6,7 @@ android {
     defaultConfig {
         applicationId "com.vito.research.camerahook"
         minSdkVersion 10
+        //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -29,6 +30,9 @@ android {
         ndkBuild {
             path file("src\\main\\java\\jni\\Android.mk")
         }
+    }
+    lintOptions {
+        abortOnError false
     }
 }
 
